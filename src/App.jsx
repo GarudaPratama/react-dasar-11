@@ -1,23 +1,16 @@
 import React from "react";
 import ProfilPengguna from "./components/ProfilPengguna";
+import LoginForm from "./components/LoginForm";
 
 
 function app() {
-  return (
+  return(
     <div>
-      <ProfilPengguna
-        nama="Azki"
-        peran="FrontEnd" />
-
-      <ProfilPengguna
-        nama="Azka"
-        peran="BackEnd" />
-
-        <ProfilPengguna
-        nama="Avrijal"
-        peran="Bodyguard Acho" />
+      <LoginForm />
     </div>
   )
+
+  
 }
 
 export default app;
