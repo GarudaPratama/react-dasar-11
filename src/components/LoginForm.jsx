@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import '../index.css'
+import { Button } from "@/components/ui/button";
 
 export default function LoginForm() {
 
@@ -11,26 +13,25 @@ export default function LoginForm() {
         console.log(username.toUpperCase(), password)
     }
 
-
+    
 
     return (
         <form onSubmit={handleSubmit}>
-            <div>
+            <div className='box'>
                 <label htmlFor='username'>Username</label>
-                <input name='username' type="text" value={username.toUpperCase()} onChange={(e) => setUsername(e.target.value)} />
+                <input className='border rounded-sm' name='username' type="text" value={username.toUpperCase()} onChange={(e) => setUsername(e.target.value.toUpperCase())} />
             </div>
 
             <div>
                 <label htmlFor='password'>Password</label>
-                <input name='password' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <input className='border rounded-sm' name='password' type="password" value={password} onChange={(e) => setPassword(e.target.value) } />
             </div>    
 
-            <button 
-                style={{display:' block'}}
+            <Button 
                 type='submit'
             >
                 Kirim
-            </button>
+            </Button>
         </form>
     )
 }
