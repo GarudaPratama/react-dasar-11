@@ -1,5 +1,5 @@
 import React from "react";
-import profilStyles from './ProfilPengguna.module.css'
+import styleProfil from './ProfilPengguna.module.css';
 import { Calendar } from "@/components/ui/calendar"
 
 export default function ProfilPengguna({nama, peran}) {
@@ -8,7 +8,7 @@ export default function ProfilPengguna({nama, peran}) {
     
     return (
         <section className='border p-6 mb-2 text-xl font-semibold'>
-            <h1>Nama Saya : {nama}</h1>
+            <h1 className={styleProfil.box}>Nama Saya : {nama}</h1>
             <h1>Peran Saya : {peran}</h1>
             <Calendar
                 mode="single"
